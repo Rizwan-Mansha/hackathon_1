@@ -21,6 +21,7 @@ const Page = ({params}:{params:{slug:string}}) => {
       productPrice={item.price}
       category={item.category}
       id={item.id}
+      tagline={item.tagline}
     />
     
     </div>
