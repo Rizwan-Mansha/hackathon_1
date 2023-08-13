@@ -26,10 +26,10 @@ const Header = () => {
 
       <div className='flex justify-center items-center bg-white rounded-md border border-gray-200 '>
       
-      <Search /> 
+      <Search className='h-4'/> 
       
       <div className='flex justify-center items-center '>
-      <Input type="input" placeholder='What you looking for' className='border-'/>
+      <Input type="input" placeholder='What you looking for' className='border-1 h-7 w-72'/>
       </div>
       </div>
 

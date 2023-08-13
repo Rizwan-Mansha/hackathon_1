@@ -35,9 +35,9 @@ const Hero = () => {
         </div>
       {/* Brand Logos */}
       <div className="mt-6 flex gap-x-4 ">
-            {BrandLogo.map((logo) => {
-              return(<Image src={logo.img} alt={logo.alt} />)
-            })}
+            {BrandLogo.map((logo,index) => 
+              (<Image key={index} src={logo.img} alt={logo.alt} />)
+            )}
           </div>
            
       </div>

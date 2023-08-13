@@ -1,10 +1,16 @@
+'use client'
 import React from "react";
 import { Products } from "@/utils/mock";
 import Image, { StaticImageData } from "next/image";
 // import Quantity from "@/components/Quantity";
 import { ShoppingCart } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import AddToCart from "@/components/AddToCart";
+import { product } from "@/utils/types";
+
+interface Props{
+   products:product[]
+}
+
 
 const getProductDetail = (id: number | string) => {
   return Products.filter((product) => product.id == id);
@@ -16,12 +22,22 @@ const Page = ({ params }: { params: { id: number } }) => {
   const sizes = ["xs", "s", "m", "l", "xl"];
 
   return (
+    <>
     <div className=" flex flex-wrap py-10 mt-16  ">
-      {result.map((product) => (
-        <div key={product.id} className="flex justify-between gap-6">
-          {/* Left Image */}
+      {result.map((product, index) => (
+        <div key={product.id} className="flex gap-12  ">
+        {/* Left Small Images */}
+          <div>
+          {product.image[0].url.slice(1).map((img, idx) => (
+            <div key={idx} className="w-32 h-32 mb-4">
+            <Image src={img} alt={product.name} />
+            </div>
+            ))}
+
+          </div>
+          {/* Preview Image */}
           <div className="">
-            <Image src={product.image} alt={product.name} />
+            <Image src={product.image[0].url[0]} alt={product.name} className="h-[500px] w-[500px]"/>
           </div>
           {/* Right Content */}
           <div>
@@ -62,7 +78,17 @@ const Page = ({ params }: { params: { id: number } }) => {
           </div>
         </div>
       ))}
+      {/* {Product Information Section} */}
+    
     </div>
+      <section className="mt-24 mb-16 mx-20">
+        <div className="relative flex items-center">
+          <div className="absolute ml-0  font-bold text-9xl text-gray-100 -z-10">Overview</div>
+          <h3 className="font-semibold text-2xl tracking-wider">Product Information</h3>
+        </div>
+      </section>
+      <hr className=" text-gray-950 mx-auto  font-extrabold " />
+      </>
   );
 };
 

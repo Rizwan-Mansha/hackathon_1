@@ -1,19 +1,18 @@
 import Image, { StaticImageData } from "next/image";
 import React from "react";
-import { Button } from "./ui/button";
 import Link from "next/link";
-import {FC} from 'react';
-import AddToCart from '@/components/AddToCart'
 
 
 
 interface ProductTypes {
   productImage: StaticImageData;
+  // productImage={item.image[0].url[0]]}
   alt: string;
   productName: string;
   productPrice: number;
   category:string;
   id:number;
+  tagline:string
 }
 
 
@@ -23,19 +22,18 @@ const ProductCart = (props:ProductTypes) => {
   return (
     <>
     <Link href={`/products/${props.id}`}>
-    <div className="w-72 font-bold text-lg px-5 ">
+    <div className="w-72 font-bold text-lg ml-7 my-8">
       
       <div>
         <Image src={props.productImage} alt={props.alt} />
         <h3>{props.productName}</h3>
-        <p>${props.productPrice}</p> 
-        <p>Category 
-          <span className="text-base font-normal ">{props.category}</span>
-        </p>
+        <h4 className="text-base text-gray-400 mb-2 mt-1">{props.tagline}</h4>
+        <p className="text-xl">${props.productPrice}</p> 
+        
         </div>
         </div>
         </Link>
-        <AddToCart />
+       
         </>
         
         

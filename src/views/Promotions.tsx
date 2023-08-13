@@ -4,18 +4,13 @@ import SummerSeason from "/public/Promotions/event1.webp";
 import FlexSweatshirt from "/public/Promotions/event2.webp";
 import Bomberjacket from "/public/Promotions/event3.webp";
 import { Button } from "@/components/ui/button";
+import HeadingSection from "@/components/HeadingSection";
 const Promotions = () => {
   return (
     <div className="mb-12">
-      <div className="mt-16">
-        <h3 className="flex justify-center text-blue-700 text-sm font-semibold pb">
-          PROMOTIONS
-        </h3>
-        <h2 className="flex justify-center mt-3 mb-8 text-4xl font-bold">
-          Our Promotions Events
-        </h2>
-      </div>
 
+      <HeadingSection sectionName="PROMOTIONS" heading="Our Promotions Events" />
+     
       {/* div event card */}
       {/* main div */}
       <div className=" flex  justify-evenly">
@@ -52,10 +47,12 @@ const Promotions = () => {
 
         <div className="flex  space-x-4">
           <div className="ml-5 bg-[#EFE1C7]">
+            <div className="ml-5">
             <h3 className="mt-7">Flex Sweatshirt</h3>
             <div className="flex gap-x-2 font-semibold text-lg">
               <p className="line-through font-medium">$100.00</p>
               <p>$75.00</p>
+            </div>
             </div>
             {/* <div className="relative"> */}
             <div className="mt-4 ">
@@ -68,10 +65,12 @@ const Promotions = () => {
           </div>
 
           <div className="ml-5 bg-[#D7D7D9] ">
+          <div className="ml-5">
             <h3 className="mt-7">Flex Push Button Bomber</h3>
             <div className="flex gap-x-2 font-semibold text-lg">
               <p className="line-through font-medium">$225.00</p>
               <p>$190.00</p>
+            </div>
             </div>
 
             <div className="mt-4">

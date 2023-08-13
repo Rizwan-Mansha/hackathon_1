@@ -15,7 +15,7 @@ const Page = ({params}:{params:{slug:string}}) => {
       <div className="flex-1">
       <ProductCart
       key={item.id}
-      productImage={item.image as StaticImageData}
+      productImage={item.image[0].url[0]}
       alt={item.name}
       productName={item.name}
       productPrice={item.price}

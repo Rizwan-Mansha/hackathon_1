@@ -1,6 +1,9 @@
 import { product } from "./types";
 import P1 from '/public/Product1.png'
 import P2 from '/public/Product2.png'
+import P2_1 from '/public/Product2/P2_1.png'
+import P2_2 from '/public/Product2/P2_2.png'
+import P2_3 from '/public/Product2/P2_3.png'
 import P3 from '/public/Product3.png'
 import P4 from '/public/Product4.png'
 import P5 from '/public/Product5.png'
@@ -18,15 +21,15 @@ export const Products:product[] = [
         tagline: "Sweater",
         category: 'female',
         price: 195,
-        image: P1
+        image: [{id:1, url:[P1]}]
     },
     {
         id: 2,
         name: 'Cameryn Sash Tie Dress',
         tagline: "Dress",
-        category: 'male',
+        category: 'female',
         price: 545,
-        image: P2
+        image: [{id:2, url:[P2,P2_1,P2_2,P2_3]}]
     },
     {
         id: 3,
@@ -34,7 +37,7 @@ export const Products:product[] = [
         category: 'kids',
         tagline: "Sweater",
         price: 175,
-        image: P3
+        image: [{id:3, url:[P3]}]
     },
     {
         id: 4,
@@ -42,15 +45,15 @@ export const Products:product[] = [
         tagline: "Pants",
         category: 'female',
         price: 175,
-        image: P4
+        image: [{id:4, url:[P4]}]
     },
     {
         id: 5,
         name: 'Pink Fleece Sweatpants',
         tagline: "Pants",
-        category: 'male',
+        category: 'female',
         price: 195,
-        image: P5
+        image: [{id:5, url:[P5]}]
     },
    {
         id: 6,
@@ -58,7 +61,7 @@ export const Products:product[] = [
         tagline: "Pants",
         category: 'female',
         price: 150,
-        image: P6
+        image: [{id:6, url:[P6]}]
     }
    , {
         id: 7,
@@ -66,15 +69,15 @@ export const Products:product[] = [
         tagline: "Jackets",
         category: 'female',
         price: 525,
-        image: P7
+        image: [{id:7, url:[P7]}]
     }
    , {
         id: 8,
         name: 'Flex Push Button Bomber',
         tagline: "Jackets",
-        category: 'female',
+        category: 'male',
         price: 225,
-        image: P8
+        image: [{id:8, url:[P8]}]
     },
    {
         id: 9,
@@ -82,7 +85,7 @@ export const Products:product[] = [
         tagline: "T Shirts",
         category: 'female',
         price: 75,
-        image: P9
+        image: [{id:9, url:[P9]}]
     }
    , {
         id: 10,
@@ -90,14 +93,14 @@ export const Products:product[] = [
         tagline: "Jackets",
         category: 'female',
         price: 225,
-        image: P10
+        image: [{id:10, url:[P10]}]
     }
    , {
         id: 11,
         name: 'Raglan Sweatshirt',
         tagline: "Sweater",
-        category: 'female',
+        category: 'male',
         price: 150,
-        image: P11
+        image: [{id:11, url:[P11]}]
     }
 ];
