@@ -1,15 +1,15 @@
 'use client'
-import React from "react";
+import { useState } from "react";
 import { Products } from "@/utils/mock";
 import Image, { StaticImageData } from "next/image";
 // import Quantity from "@/components/Quantity";
-import { ShoppingCart } from "lucide-react";
+import { Divide, ShoppingCart } from "lucide-react";
 import AddToCart from "@/components/AddToCart";
 import { product } from "@/utils/types";
 
-interface Props{
-   products:product[]
-}
+// interface Props{
+//    products:product[]
+// }
 
 
 const getProductDetail = (id: number | string) => {
@@ -20,24 +20,28 @@ const Page = ({ params }: { params: { id: number } }) => {
   const result = getProductDetail(params.id);
 
   const sizes = ["xs", "s", "m", "l", "xl"];
+  const [previewImage, setPreviewImage] = useState<StaticImageData | string>();
 
+  function handleHoverPreview(img:StaticImageData){
+      setPreviewImage(img);
+  }
   return (
     <>
     <div className=" flex flex-wrap py-10 mt-16  ">
-      {result.map((product, index) => (
+      {result.map((product) => (
         <div key={product.id} className="flex gap-12  ">
         {/* Left Small Images */}
           <div>
-          {product.image[0].url.slice(1).map((img, idx) => (
-            <div key={idx} className="w-32 h-32 mb-4">
-            <Image src={img} alt={product.name} />
-            </div>
+          {product.image[0].url.map((img, index) => (
+            <div key={index} className="w-32 h-32 mb-4">
+            <Image src={img} alt={product.name} onMouseEnter={() => (handleHoverPreview(img))}/>
+          </div>
             ))}
 
           </div>
           {/* Preview Image */}
           <div className="">
-            <Image src={product.image[0].url[0]} alt={product.name} className="h-[500px] w-[500px]"/>
+            <Image src={previewImage?previewImage:product.image[0].url[0]} alt={product.name} width={500} height={500}/>
           </div>
           {/* Right Content */}
           <div>
@@ -93,3 +97,4 @@ const Page = ({ params }: { params: { id: number } }) => {
 };
 
 export default Page;
+
