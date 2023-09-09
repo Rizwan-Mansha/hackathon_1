@@ -1,6 +1,6 @@
 'use client'
 import Phrases from '@/components/Phrases';
-import Image7 from '/public/Unique.webp'
+import Image7 from 'public/Product7.png'
 import Image, { StaticImageData } from 'next/image';
 import { Button } from '@/components/ui/button';
 import {Products} from '@/utils/mock'

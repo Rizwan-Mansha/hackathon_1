@@ -12,7 +12,7 @@ const Page = ({params}:{params:{slug:string}}) => {
     {
     getProductByCategory.length>0 ?
     getProductByCategory.map(item => (
-      <div className="flex-1">
+      <div className="flex-1" key={item.id}>
       <ProductCart
       key={item.id}
       productImage={item.image[0].url[0]}

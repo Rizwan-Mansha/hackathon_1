@@ -1,3 +1,4 @@
+
 'use client'
 import { useState } from "react";
 import { Products } from "@/utils/mock";
@@ -55,8 +56,8 @@ const Page = ({ params }: { params: { id: number } }) => {
               <h3 className="text-xs mt-6 font-semibold">SELECT SIZE</h3>
               {/* Sizes */}
               <div className="flex gap-x-6">
-                {sizes.map((size) => (
-                  <div className="h-8 w-8 rounded-full hover:shadow-2xl mt-2 center">
+                {sizes.map((size,id) => (
+                  <div key={id} className="h-8 w-8 rounded-full hover:shadow-2xl mt-2 center">
                     <span className=" font-bold text-sm text-gray-600">
                       {size.toUpperCase()}
                     </span>
@@ -97,4 +98,3 @@ const Page = ({ params }: { params: { id: number } }) => {
 };
 
 export default Page;
-

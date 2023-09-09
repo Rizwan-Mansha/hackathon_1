@@ -9,7 +9,7 @@ const AllProducts = () => {
   <div className="flex justify-evenly flex-wrap    ">
     {  
       Products.map(item => 
-      <div className="flex-1">
+      <div className="flex-1" key={item.id}>
       <ProductCart
       key={item.id}
       productImage={item.image[0].url[0]}
