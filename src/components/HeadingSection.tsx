@@ -3,7 +3,8 @@ import {FC} from 'react'
 
 interface SecHeadings{
     sectionName: string,
-    heading: string
+    heading: string,
+    headingStyle?:string
 }
 
 
@@ -14,7 +15,7 @@ const HeadingSection:FC<SecHeadings> = (props) => {
     <h3 className="flex justify-center text-blue-700 text-sm font-semibold pb">
       {props.sectionName}
     </h3>
-    <h2 className="flex justify-center mt-3 mb-8 text-4xl font-bold">
+    <h2 className={`flex justify-center mt-3 mb-8 text-3xl md:text-4xl font-bold ${props.headingStyle}`} >
       {props.heading}
     </h2>
   </div>

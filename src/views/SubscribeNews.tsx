@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 
 const SubscribeNews = () => {
   return (
-    <div className='relative my-40 flex flex-col items-center'>
+    <div className='relative my-40 ml-4 flex flex-col items-center'>
         <div className='absolute z-10  text-gray-300 opacity-40 font-bold text-9xl'>
             <p className=''>Newsletter</p>
             </div>

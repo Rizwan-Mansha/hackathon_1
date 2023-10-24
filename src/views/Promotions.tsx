@@ -7,85 +7,75 @@ import { Button } from "@/components/ui/button";
 import HeadingSection from "@/components/HeadingSection";
 const Promotions = () => {
   return (
-    <div className="mb-12">
+    <section className="mb-12 flex-col ">
+      <HeadingSection
+        sectionName="PROMOTIONS"
+        heading="Our Promotions Events"
+        headingStyle="text-3xl"
+      />
 
-      <HeadingSection sectionName="PROMOTIONS" heading="Our Promotions Events" />
-     
       {/* div event card */}
       {/* main div */}
-      <div className=" flex  justify-evenly">
-        <div className="flex flex-auto  flex-col">
-          <div className=" flex-1 relative max-w-lg bg-gray-300 ">
-            <div className=" py-6 px-10 ">
-              <span className="font-bold text-3xl">GET UP</span> <br />
-              <p className="flex items-center font-bold text-3xl">
-                <span className="mr-2">TO</span>
-                <span className=" text-4xl">60%</span>
-              </p>
-              <span className="font-medium max-w-sm text-lg">
-                For the
-                <br /> summer <br /> season
-              </span>
-            </div>
-            <div className="bottom-0 right-4 absolute">
+      <div className=" flex flex-col sm:ml-[7%]  md:ml-[10%] lg:flex-row lg:ml-[0px] gap-x-4">
+        <div className="flex flex-col sm:max-w-xl md:max-w-2xl  lg:flex-1">
+          <div className=" flex-1 relative  bg-gray-300 py-6 px-10  ">
+            <span className="font-bold text-3xl">GET UP</span> <br />
+            <p className="flex items-center font-bold text-3xl">
+              <span className="mr-2">TO</span>
+              <span className=" text-4xl">60%</span>
+            </p>
+            <span className="font-medium max-w-sm text-lg">
+              For the
+              <br /> summer <br /> season
+            </span>
+            <div className="bottom-0 -right-6 sm:right-4 lg:right-0 absolute">
               <Image src={SummerSeason} alt="Summer Season" className="" />
             </div>
           </div>
 
-          <div className="flex-1 max-w-lg justify-center">
-            <div className=" text-center text-white mt-4  left-0 bg-[#212121]  ">
-              <p className=" pt-10 font-bold text-4xl">GET 30% Off </p>
-              <p className="py-4">USE PROMO CODE</p>
-              <div className="pb-8">
-                <Button className=" bg-gray-600 tracking-[0.30rem] font-semibold text-lg hover:bg-gray-600 w-72">
-                  DINEWEEKENDSALE
-                </Button>
-              </div>
+          <div className=" text-center text-white mt-4 bg-[#212121] ">
+            <p className=" pt-10 font-bold text-4xl">GET 30% Off </p>
+            <p className="py-4">USE PROMO CODE</p>
+            <div className="pb-8">
+              <Button className=" bg-gray-600 tracking-[0.30rem] font-semibold text-lg hover:bg-gray-600 w-72">
+                DINEWEEKENDSALE
+              </Button>
             </div>
           </div>
         </div>
-
-        <div className="flex  space-x-4">
-          <div className="ml-5 bg-[#EFE1C7]">
-            <div className="ml-5">
-            <h3 className="mt-7">Flex Sweatshirt</h3>
-            <div className="flex gap-x-2 font-semibold text-lg">
+        <div className="flex flex-col max-lg:mt-4 text-lg lg:flex-row gap-x-4 lg:flex-1">
+          <div className=" bg-[#EFE1C7] h-52 lg:h-[434px] lg:w-[240px] relative sm:max-w-xl md:max-w-2xl ">
+            <h3 className="pt-10 ml-11">Flex Sweatshirt</h3>
+            <div className="flex gap-x-2 font-semibold text-lg ml-11">
               <p className="line-through font-medium">$100.00</p>
               <p>$75.00</p>
             </div>
-            </div>
-            {/* <div className="relative"> */}
-            <div className="mt-4 ">
-              <Image
-                src={FlexSweatshirt}
-                alt={"Flex Sweatshirt"}
-                className="h-[340px]"
-              />
-            </div>
+
+            <Image
+              src={FlexSweatshirt}
+              alt={"Flex Sweatshirt"}
+              className="h-52 lg:h-72 w-auto absolute bottom-0  xs:left-40  max-lg:right-20"
+            />
           </div>
 
-          <div className="ml-5 bg-[#D7D7D9] ">
-          <div className="ml-5">
-            <h3 className="mt-7">Flex Push Button Bomber</h3>
-            <div className="flex gap-x-2 font-semibold text-lg">
+          <div className=" bg-[#D7D7D9] h-52 lg:h-[434px] lg:w-[240px] relative max-lg:mt-4 sm:max-w-xl md:max-w-2xl">
+            <h3 className="pt-10 ml-11 ">Flex Push Bomber</h3>
+            <div className="flex gap-x-2 font-semibold text-lg ml-11">
               <p className="line-through font-medium">$225.00</p>
               <p>$190.00</p>
             </div>
-            </div>
 
-            <div className="mt-4">
-              <Image
-                src={Bomberjacket}
-                alt={"Flex Push Button Bomber"}
-                className="h-[340px]"
-              />
-            </div>
+            <Image
+              src={Bomberjacket}
+              alt={"Flex Push Button Bomber"}
+              className="absolute h-52 lg:h-72 w-auto bottom-0  xs:left-40  max-lg:right-20"
+            />
           </div>
-
-          {/* Row Products */}
         </div>
+
+        {/* Row Products */}
       </div>
-    </div>
+    </section>
   );
 };
 
