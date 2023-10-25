@@ -6,9 +6,9 @@ import ProductCart from '@/components/ProductCart'
 
 const Page = ({params}:{params:{slug:string}}) => {
     const getProductByCategory = Products.filter((item)=>item.category === params.slug);
-   
+
     return(
-      <div className=" flex justify-evenly flex-wrap mt-16 py-10 ">
+      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-auto mt-16 py-10 ">
     {
     getProductByCategory.length>0 ?
     getProductByCategory.map(item => (
