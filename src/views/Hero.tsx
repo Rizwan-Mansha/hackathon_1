@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <section className="flex flex-col lg:flex-row gap-y-10 py-6 justify-center items-center">
       {/* content */}
-      <div className="flex-1 mt-16 mr-11 ">
+      <div className="flex-1 mt-16 ml-8 md:mr-14 ">
         <Badge className="px-4 py-2 rounded-lg font-semibold text-md bg-blue-200 text-blue-700">
           Sale 70%
         </Badge>
@@ -23,7 +23,7 @@ const Hero = () => {
         </p>
         <div className="flex  items-center py-2 px-2 mt-4 text-white font-bold">
           <div className="relative -left-2.5">
-            <Button className=" bg-black h-18 rounded-none font-semibold text-md p-3 md:p-4 ">
+            <Button className=" bg-black hover:bg-gray-900 h-18 rounded-none font-semibold text-md p-3 md:p-4 ">
               <ShoppingCart className="mr-2 h-5 w-5" />
               <div className="flex flex-col justify-center ">
                 <span className="mb-[-10px]">Start</span>

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import HeadingSection from "@/components/HeadingSection";
 const Promotions = () => {
   return (
-    <section className="mb-12 flex-col ">
+    <section className="mb-2 sm:mb-12 flex-col ">
       <HeadingSection
         sectionName="PROMOTIONS"
         heading="Our Promotions Events"
@@ -16,7 +16,7 @@ const Promotions = () => {
 
       {/* div event card */}
       {/* main div */}
-      <div className=" flex flex-col sm:ml-[7%]  md:ml-[10%] lg:flex-row lg:ml-[0px] gap-x-4">
+      <div className=" flex flex-col sm:ml-[7%]  md:ml-[2%] lg:flex-row lg:ml-[0px] gap-x-4">
         <div className="flex flex-col sm:max-w-xl md:max-w-2xl  lg:flex-1">
           <div className=" flex-1 relative  bg-gray-300 py-6 px-10  ">
             <span className="font-bold text-3xl">GET UP</span> <br />
@@ -54,7 +54,7 @@ const Promotions = () => {
             <Image
               src={FlexSweatshirt}
               alt={"Flex Sweatshirt"}
-              className="h-52 lg:h-72 w-auto absolute bottom-0  xs:left-40  max-lg:right-20"
+              className="h-52 lg:h-72 w-auto absolute bottom-0   right-6 sm:right-12 md:right-24 lg:right-2"
             />
           </div>
 
@@ -68,7 +68,7 @@ const Promotions = () => {
             <Image
               src={Bomberjacket}
               alt={"Flex Push Button Bomber"}
-              className="absolute h-52 lg:h-72 w-auto bottom-0  xs:left-40  max-lg:right-20"
+              className="absolute h-52 lg:h-72 w-auto bottom-0  right-6 sm:right-12 md:right-24  lg:right-2"
             />
           </div>
         </div>

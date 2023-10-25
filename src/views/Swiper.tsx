@@ -19,7 +19,7 @@ const Slider = ({slides}:{slides:product[]}) => {
      
       {slides.map((slide, index) =>(
         <SwiperSlide key={index}>{
-          <div className='relative mt-12 h-[500px]'>
+          <div className='relative mt-12 h-[320px] sm:h-96'>
             <Link href={`products/${slide.id}`}>
             <div className='absolute cursor-pointer hover:scale-110 duration-500 '>
 
