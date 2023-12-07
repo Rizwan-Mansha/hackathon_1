@@ -17,8 +17,8 @@ const Promotions = () => {
 
       {/* div event card */}
       {/* main div */}
-      <div className=" flex flex-col mx-auto lg:flex-row lg:ml-[0px] ">
-        <div className="flex flex-col w-auto  md:max-w-2xl  lg:flex-1">
+      <div className=" flex flex-col mx-auto lg:flex-row gap-x-4 lg:ml-[0px] ">
+        <div className="flex flex-col    lg:flex-1">
           <div className=" flex-1 relative  bg-gray-300 py-6 px-10  ">
             <span className="font-bold text-3xl">GET UP</span> <br />
             <p className="flex items-center font-bold text-3xl">
@@ -45,7 +45,7 @@ const Promotions = () => {
           </div>
         </div>
         <div className="flex flex-col max-lg:mt-4 text-lg lg:flex-row gap-x-4 lg:flex-1">
-          <div className=" bg-[#EFE1C7] h-52 lg:h-[434px] lg:w-[240px] relative sm:max-w-xl md:max-w-2xl ">
+          <div className=" bg-[#EFE1C7] h-52 lg:h-[434px] lg:flex-1 relative sm:max-w-xl md:max-w-2xl ">
             <h3 className="pt-10 ml-11">Flex Sweatshirt</h3>
             <div className="flex gap-x-2 font-semibold text-lg ml-11">
               <p className="line-through font-medium">$100.00</p>
@@ -55,11 +55,11 @@ const Promotions = () => {
             <Image
               src={FlexSweatshirt}
               alt={"Flex Sweatshirt"}
-              className="h-52 lg:h-72 w-auto absolute bottom-0   right-6 sm:right-12 md:right-24 lg:right-2"
+              className="h-60 lg:h-72 w-auto absolute bottom-0   right-6 sm:right-12 md:right-24 lg:right-2"
             />
           </div>
 
-          <div className=" bg-[#D7D7D9] h-52 lg:h-[434px] lg:w-[240px] relative max-lg:mt-4 sm:max-w-xl md:max-w-2xl">
+          <div className=" bg-[#D7D7D9] h-52 lg:h-[434px] lg:flex-1 relative max-lg:mt-4 sm:max-w-xl md:max-w-2xl">
             <h3 className="pt-10 ml-11 ">Flex Push Bomber</h3>
             <div className="flex gap-x-2 font-semibold text-lg ml-11">
               <p className="line-through font-medium">$225.00</p>
@@ -69,12 +69,10 @@ const Promotions = () => {
             <Image
               src={Bomberjacket}
               alt={"Flex Push Button Bomber"}
-              className="absolute h-52 lg:h-72 w-auto bottom-0  right-6 sm:right-12 md:right-24  lg:right-2"
+              className="absolute h-60 lg:h-72 w-auto bottom-0  right-6 sm:right-12 md:right-24  lg:right-2"
             />
           </div>
         </div>
-
-        {/* Row Products */}
       </div>
     </section>
   );
